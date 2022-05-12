@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/portfolio/css/AboutMe.css">
     <title>Title</title>
 </head>
 <body>
 
     {% extends 'portfolio/layout.html' %}
     {% block main %}
-        <h3>About</h3>
+        <section>
+
+        </section>
+        <div class="resume">
+                  <h3>About me</h3>
         <p>Student of Video Game Development at Universidade Lusófona De Humanidades e Tecnologias.
-            Currently developing my skills in Unity and C# programming and also Python, HTML, and CSS</p>
+            Currently developing my skills in Unity and C# programming and
+            also Python, HTML, and CSS.</p>
 
         <p>For my graduation final project,
             I'm developing a project called Alter,
@@ -19,7 +25,26 @@
 
         <p>I am interested in developing entertainment games, improving my skills,
             and better understanding the mechanisms behind the creation of video games.</p>
+        </div>
+
+
+        <section class="subjects">
+
+        <h3>Subjects</h3>
+
+        <ul>
+            {{ LP2name}}
+        </ul>
+
+        </section>
+
+
     {% endblock %}
+
+
+
+
+
 
 </body>
 </html>
