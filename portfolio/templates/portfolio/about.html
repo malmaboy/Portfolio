@@ -28,13 +28,33 @@
         </div>
 
 
-        <section class="subjects">
+        <section class="subject">
 
-        <h3>Subjects</h3>
+            <h1><b>Subjects</b></h1>
 
-        <ul>
-            {{ LP2name}}
-        </ul>
+            <div class="subjects">
+                <div>
+                    <div><h3> {{LP2name}} </h3></div>
+                    <div>
+                        <h3>Topics</h3>
+                        <ul>
+                            {% for LP2Topic in LP2Topics %}
+                            <li>{{  LP2Topic }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="projects">
+                        <h3>Projects</h3>
+                        <a href="https://github.com/malmaboy/wolf_and_sheepsLP2">
+                            Wolf and Sheeps
+                        </a>
+                    </div>
+                </div>
+            <div>
+
+            </div>
+
+            </div>
 
         </section>
 

@@ -33,7 +33,8 @@ def about_view(request):
 
     content = {
         'LP2name': LP2.name,
-        'LP2Topics': LP2.topics
+        'LP2Topics': LP2.topics,
+        'LP2Projects': lp2Projects
     }
 
     return render(request, 'portfolio/about.html', content)

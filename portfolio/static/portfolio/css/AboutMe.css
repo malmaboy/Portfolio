@@ -1,5 +1,5 @@
 *{
-    color: black;
+    color: red;
 }
 
 .resume{
@@ -13,12 +13,8 @@
 
 /*Letter in center*/
 
-.subjects h3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-}
+
+
 
 
 
