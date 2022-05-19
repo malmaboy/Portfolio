@@ -27,14 +27,37 @@ def about_view(request):
                    'https://github.com/JMatos1221/LP2_Recurso',
                    'https://github.com/malmaboy/NasaProject_LP2',
                    'https://github.com/malmaboy/wolf_and_sheepsLP2']
-    LP2 = models.subjects("Linguagens da Programação 2", "2nd",
-                          "1st Semester", 6, "3rd", lp2Topics, 4,
+
+    aiTopics = ['Decicion Trees', 'Procedural Generation', 'Path Fiding',
+                'Algorithm Family Minimax', 'Machine Learning']
+
+    LP2 = models.subjects("Programming Languages 2", "2nd",
+                          "1st Semester", 6, "2020/2021", lp2Topics, 4,
                           "Nuno Fachada", lp2Projects)
+    AI = models.subjects("Artificial Intelligence for Videogames", "2nd",
+                         "2nd Semester", 6, "2020/2021", aiTopics, 5,
+                         "Nuno Fachada", None)
+
+
+
 
     content = {
+        # LP2
         'LP2name': LP2.name,
         'LP2Topics': LP2.topics,
-        'LP2Projects': lp2Projects
+        'LP2Projects': lp2Projects,
+        'LP2etcs': LP2.etcs,
+        'LP2semester': LP2.semester,
+        'LP2lectiveYear': LP2.lective_year,
+
+        # Ai
+        'AITopics': aiTopics,
+        'AIName': AI.name,
+        'AIetcs': AI.etcs,
+        'AISemester': AI.semester,
+        'AIlectiveYear': AI.lective_year
+        # Game Dev
+
     }
 
     return render(request, 'portfolio/about.html', content)

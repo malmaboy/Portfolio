@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../static/portfolio/css/AboutMe.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Hugo Carvalho">
     <title>Title</title>
 </head>
 <body>
@@ -10,12 +11,10 @@
     {% extends 'portfolio/layout.html' %}
     {% block main %}
         <section>
-
-        </section>
-        <div class="resume">
+                 <div class="resume">
                   <h3>About me</h3>
         <p>Student of Video Game Development at Universidade Lusófona De Humanidades e Tecnologias.
-            Currently developing my skills in Unity and C# programming and
+            Currently, developing my skills in Unity and C# programming and
             also Python, HTML, and CSS.</p>
 
         <p>For my graduation final project,
@@ -26,15 +25,16 @@
         <p>I am interested in developing entertainment games, improving my skills,
             and better understanding the mechanisms behind the creation of video games.</p>
         </div>
-
+        </section>
 
         <section class="subject">
 
             <h1><b>Subjects</b></h1>
-
             <div class="subjects">
-                <div>
-                    <div><h3> {{LP2name}} </h3></div>
+                <div class="lp2">
+                    <div><h3> {{LP2name}}, ETCS: {{ LP2etcs }},
+                        {{ LP2semester }}, {{ LP2lectiveYear }}
+                    </h3></div>
                     <div>
                         <h3>Topics</h3>
                         <ul>
@@ -45,24 +45,88 @@
                     </div>
                     <div class="projects">
                         <h3>Projects</h3>
-                        <a href="https://github.com/malmaboy/wolf_and_sheepsLP2">
-                            Wolf and Sheeps
-                        </a>
+                        <ul>
+                            <li><a href='https://github.com/malmaboy/wolf_and_sheepsLP2'>Wolf and Sheeps</a></li>
+                            <li><a href='https://github.com/JMatos1221/LP2_Recurso'>Rock,Paper and Scissors Simulatio</a></li>
+                            <li><a href='https://github.com/malmaboy/NasaProject_LP2'>Nasa Project</a></li>
+                            <li><a href='https://github.com/malmaboy/Snakes_And_Ladders_LP1'>Snakes and Ladders</a></li>
+                        </ul>
                     </div>
                 </div>
-            <div>
-
             </div>
+        </section>
+        <section class="subject">
 
+            <h1><b>Subjects</b></h1>
+            <div class="subjects">
+                <div class="lp2">
+                    <div><h3> {{AIName}}, ETCS: {{ AIetcs }}, {{ AISemester }},
+                        {{  AIlectiveYear}}
+                    </h3></div>
+                    <div>
+                        <h3>Topics</h3>
+                        <ul>
+                            {% for AItopic in AITopics %}
+                            <li>{{  AItopic }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="projects">
+                        <h3>Projects</h3>
+                        <ul>
+                            <li><a href='https://github.com/malmaboy/AI_Project'>Trouxa Bot</a></li>
+                            <li><a href='https://www.youtube.com/watch?v=L5SOX6C_NtE'>Loctan's Adventure</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>   <section class="subject">
 
+            <h1><b>Subjects</b></h1>
+            <div class="subjects">
+                <div class="lp2">
+                    <div><h3> {{LP2name}}, ETCS: {{ LP2etcs }}, {{ LP2semester }}
+                    </h3></div>
+                    <div>
+                        <h3>Topics</h3>
+                        <ul>
+                            {% for AItopic in AITopics %}
+                            <li>{{  AItopic }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="projects">
+                        <h3>Projects</h3>
+                        <ul>
+                            <li><a href='https://github.com/malmaboy/wolf_and_sheepsLP2'>Wolf and Sheeps</a></li>
+                            <li><a href='https://github.com/JMatos1221/LP2_Recurso'>Rock,Paper and Scissors Simulatio</a></li>
+                            <li><a href='https://github.com/malmaboy/NasaProject_LP2'>Nasa Project</a></li>
+                            <li><a href='https://github.com/malmaboy/Snakes_And_Ladders_LP1'>Snakes and Ladders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <section class="skills">
+                <div>
+                    <h1>Personal skills and competences</h1>
 
+                    <div>
+                        <h2>Programming Languages</h2>
+                        <div>
+                            <ul>
+                                <li>C#</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+        </section>
     {% endblock %}
-
-
-
 
 
 

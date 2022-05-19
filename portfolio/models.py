@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -16,3 +17,7 @@ class subjects(models.Model):
         self.rank = rank
         self.prof = prof
         self.projects = projects
+
+
+class ProgrammingLanguages(models.Model):
+    name = models.CharField(max_length=40)

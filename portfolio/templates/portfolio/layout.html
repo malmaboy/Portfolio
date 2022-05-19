@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Hugo Carvalho">
     {% load static %}  
     <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/aboutMe.css' %}" crossorigin="anonymous">
     <title>Portfolio</title>
 </head>
 <body>
 
     <header>
         <div>Hugo Carvalho</div>
-        <nav>
-            <a href="{% url 'portfolio:home' %}">Home</a>
-            <a href="{% url 'portfolio:product' %}">Products</a>
-            <a href="{% url 'portfolio:about' %}">About</a>
-            <a href="{% url 'portfolio:contact' %}">Contact</a>
+        <nav class="headerButtons">
+            <div>
+                <a href="{% url 'portfolio:home' %}">Home</a>
+                <a href="{% url 'portfolio:product' %}">Products</a>
+                <a href="{% url 'portfolio:about' %}">About</a>
+                <a href="{% url 'portfolio:contact' %}">Contact</a>
+            </div>
+
         </nav>
     </header>
 
@@ -42,9 +48,18 @@
 
         {% endblock main %}
 
+
     </main>
 
-    <footer>Universidade Lusófona de Humanidades e Tecnológias,2022</footer>
+    <footer>
+        <div>
+            <a href="https://www.ulusofona.pt/">Universidade Lusófona de Humanidades e Tecnológias, 2021/2022</a>
+             <div>Logo</div>
+            <div><p>Hugo Carvalho</p></div>
+            <div><a href="mailto:hccarvalho.dev@gmail.com">Contact me</a></div>
+
+        </div>
+    </footer>
 
 </body>
 </html>

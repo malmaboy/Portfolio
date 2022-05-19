@@ -1,56 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Open+Sans:ital,wght@1,300&display=swap');
 
+
 *{
-    font-family: "Grape Nuts", cursive;
-    color: white;
+    font-family: "Gill Sans";
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
+    
 }
 
-header{
-    height: 10vh;
-    background: dimgrey;
-    color: white;
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+    position: sticky;
     top: 0;
+    background-color: dimgrey;
+    border: solid black 2px;
 
-    /*Alinha logo e menu*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  /* alinhando logo e menu */
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+
 }
 
-header div{
-    font-size: 2em;
-    padding: 1em;
+header div {
+  font-size: 2em;
+  padding: 1em;
 }
 
-header nav{
-    display: flex;
-    justify-content: flex-end;
+header nav {
+  display:flex;
+  justify-content: flex-end;
 }
+
 
 nav a {
-    padding: 0 1em;
-    text-decoration: none;
-    font-size: 1rem;
-    color: lightgrey;
+  padding: 0 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: lightgray;
 }
 
-main{
-    height: 85vh;
-    background-color: grey;
-    padding: 4em 4em;
+/*Header Buttons*/
+
+.headerButtons div > a:link{
+    background-color: hsla(0,0%,100%,0.1);
+    color: white;
 }
 
-footer{
-    height: 5vh;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 2vw;
-    align-items: center;
+
+
+main {
+  min-height: 95%;
+  width: 100%;
+  background-color:grey;
+  padding: 4em 4em;
+}
+
+footer div
+{
+
+    display: grid;
+    margin-top: auto;
     color: black;
+    background-color: white;
+    grid-template-columns: 2fr 2fr;
+}
+
+footer div:first-child{
+    padding-left: 15px;
 }
 
 

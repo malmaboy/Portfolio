@@ -1,0 +1,62 @@
+*{
+
+}
+
+
+
+.resume{
+    font-size: 35px;
+}
+.resume h3{
+    /*Letter in center*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+main{
+    border: solid black 2px;
+}
+.subject{
+    color: white;
+}
+
+
+.subjects{
+    font-size: 30px;
+}
+
+.subjects h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+h1{
+    /*Letter in center*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* Links*/
+
+
+.projects a:link{
+    font-style: oblique;
+
+}
+
+
+
+
+
