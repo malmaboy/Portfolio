@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Open+Sans:ital,wght@1,300&display=swap');
+
+
+*{
+    font-family: "Gill Sans";
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border: solid black 2px;
+
+
+    /* alinhando logo e menu */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+
+}
+
+header div {
+  font-size: 2em;
+  padding: 1em;
+}
+
+header nav {
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+
+header nav a {
+  padding: 0 1em;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: blue;
+
+}
+
+header nav a:first-child{
+    color: white;
+    background-color: blue;
+    border: solid blue 1px;
+    border-radius: 20px;
+}
+
+/*Header Buttons*/
+
+.headerButtons div > a:hover{
+    color: dimgrey;
+}
+
+
+
+main {
+    min-height: 85vh;
+    width: 100%;
+    background-color:grey;
+    padding: 4em 4em;
+}
+
+footer{
+    border: solid black 2px;
+    height: 5vh;
+}
+
+footer div
+{
+
+    display: grid;
+    margin-top: auto;
+    color: black;
+    background-color: white;
+    grid-template-columns: 2fr 2fr;
+}
+
+footer div:first-child{
+    padding-left: 15px;
+}
+
+
+
+

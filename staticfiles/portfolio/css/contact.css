@@ -1,0 +1,59 @@
+
+.contact h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+
+.contact div{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-self: center;
+    padding: 30px 5px 40px;
+    position: relative;
+    top: 2vw;
+
+}
+
+.contact div div a{
+  size: 90px;
+}
+
+.icon{
+    height: 80px;
+    width: 80px;
+}
+
+.contact div div a:visited{
+    background-color: blue;
+}
+
+.final > div{
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr;
+    top: 20vw;
+}
+
+.final > div:first-child{
+    left: 1vw;
+
+}
+
+.cv button{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.cv button:hover{
+     background-color: RoyalBlue;
+}
+
