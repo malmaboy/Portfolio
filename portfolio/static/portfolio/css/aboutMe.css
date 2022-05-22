@@ -16,9 +16,7 @@
     color: white;
     text-shadow: 2px 2px 4px black;
 }
-main{
-    border: solid black 2px;
-}
+
 .subject{
     color: white;
 }
@@ -54,6 +52,11 @@ h1{
 .projects a:link{
     font-style: oblique;
 
+}
+
+
+.video{
+    height: 100%;
 }
 
 

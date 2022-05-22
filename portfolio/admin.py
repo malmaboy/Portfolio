@@ -1,5 +1,9 @@
 from django.contrib import admin
-from portfolio.models import subjects
+import portfolio.models as models
 
 # Register your models here.
 
+admin.site.register(models.Subject)
+admin.site.register(models.Projects)
+admin.site.register(models.ProgrammingLanguages)
+admin.site.register(models.Topics)

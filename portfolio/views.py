@@ -31,36 +31,17 @@ def about_view(request):
     aiTopics = ['Decicion Trees', 'Procedural Generation', 'Path Fiding',
                 'Algorithm Family Minimax', 'Machine Learning']
 
-    LP2 = models.subjects("Programming Languages 2", "2nd",
-                          "1st Semester", 6, "2020/2021", lp2Topics, 4,
-                          "Nuno Fachada", lp2Projects)
-    AI = models.subjects("Artificial Intelligence for Videogames", "2nd",
-                         "2nd Semester", 6, "2020/2021", aiTopics, 5,
-                         "Nuno Fachada", None)
+    LP2 = models.Subject.objects.get(id=1)
+    AI = models.Subject.objects.get(id=2)
+    # suject_3 = models.Subject.objects.get(id=2)
 
-
-
-
-    content = {
-        # LP2
-        'LP2name': LP2.name,
-        'LP2Topics': LP2.topics,
-        'LP2Projects': lp2Projects,
-        'LP2etcs': LP2.etcs,
-        'LP2semester': LP2.semester,
-        'LP2lectiveYear': LP2.lective_year,
-
-        # Ai
-        'AITopics': aiTopics,
-        'AIName': AI.name,
-        'AIetcs': AI.etcs,
-        'AISemester': AI.semester,
-        'AIlectiveYear': AI.lective_year
-        # Game Dev
+    context = {
+        'LP2': LP2,
+        'AI': AI
 
     }
 
-    return render(request, 'portfolio/about.html', content)
+    return render(request, 'portfolio/about.html', context)
 
 
 def contact_view(request):

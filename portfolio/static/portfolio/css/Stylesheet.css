@@ -19,14 +19,14 @@ body{
 header {
     position: sticky;
     top: 0;
-    background-color: dimgrey;
+    background-color: white;
     border: solid black 2px;
 
 
-  /* alinhando logo e menu */
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
+    /* alinhando logo e menu */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 
 
 }
@@ -42,18 +42,26 @@ header nav {
 }
 
 
-nav a {
+
+header nav a {
   padding: 0 1em;
   text-decoration: none;
-  font-size: 1rem;
-  color: lightgray;
+  font-size: 1.2rem;
+  color: blue;
+
+}
+
+header nav a:first-child{
+    color: white;
+    background-color: blue;
+    border: solid blue 1px;
+    border-radius: 20px;
 }
 
 /*Header Buttons*/
 
-.headerButtons div > a:link{
-    background-color: hsla(0,0%,100%,0.1);
-    color: white;
+.headerButtons div > a:hover{
+    color: dimgrey;
 }
 
 
@@ -63,6 +71,10 @@ main {
   width: 100%;
   background-color:grey;
   padding: 4em 4em;
+}
+
+footer{
+    border: solid black 2px;
 }
 
 footer div

@@ -8,10 +8,15 @@
 
     {% extends 'portfolio/layout.html' %}
     {% block main %}
-            <h3>Home</h3>
-        <p>Text TExt</p>
         {%  load static %}
-        <img src="{% static 'portfolio/images/testImage.jpeg' %}" alt="Test image">
+        <subject class="video">
+             <video id="video" autoplay muted loop >
+            <source src="
+{% static 'portfolio/videos/Redemption The Deadly Sin - Trailer.mp4' %} "
+                    type="video/mp4">
+
+        </video>
+        </subject>
     {% endblock %}
 
 </body>
