@@ -27,7 +27,7 @@ header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-
+    height: 10vh;
 
 }
 
@@ -67,14 +67,15 @@ header nav a:first-child{
 
 
 main {
-  min-height: 95%;
-  width: 100%;
-  background-color:grey;
-  padding: 4em 4em;
+    min-height: 85vh;
+    width: 100%;
+    background-color:grey;
+    padding: 4em 4em;
 }
 
 footer{
     border: solid black 2px;
+    height: 5vh;
 }
 
 footer div
@@ -90,6 +91,7 @@ footer div
 footer div:first-child{
     padding-left: 15px;
 }
+
 
 
 
