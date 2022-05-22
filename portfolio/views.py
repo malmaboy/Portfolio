@@ -12,9 +12,7 @@ def home_page_view(request):
     topicos = ['HTML', 'CSS', 'Python', 'Django', 'JavaScript']
 
     context = {
-        'hora': agora.hour,
-        'local': local,
-        'topicos': topicos,
+
     }
     return render(request, 'portfolio/home.html', context)
 
@@ -45,7 +43,15 @@ def about_view(request):
 
 
 def contact_view(request):
-    return render(request, 'portfolio/contact.html')
+    agora = datetime.datetime.now()
+    local = 'Lisboa'
+
+    context = {
+        'hora': agora.now(),
+        'local': local,
+    }
+
+    return render(request, 'portfolio/contact.html', context)
 
 
 def product_view(request):

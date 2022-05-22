@@ -11,7 +11,8 @@
     grid-template-columns: 2fr 2fr;
     justify-self: center;
     padding: 30px 5px 40px;
-    
+    position: relative;
+    top: 2vw;
 
 }
 
@@ -28,7 +29,30 @@
     background-color: blue;
 }
 
+.final > div{
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr;
+    top: 20vw;
+}
 
-.cv{
+.final > div:first-child{
+    left: 1vw;
 
 }
+
+.cv button{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.cv button:hover{
+     background-color: RoyalBlue;
+}
+
