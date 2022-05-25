@@ -7,4 +7,4 @@ admin.site.register(models.Subject)
 admin.site.register(models.Projects)
 admin.site.register(models.ProgrammingLanguages)
 admin.site.register(models.Topics)
-
+admin.site.register(models.NonProgrammingLanguages)
