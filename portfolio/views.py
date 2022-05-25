@@ -19,9 +19,6 @@ def home_page_view(request):
 
 
 def about_view(request):
-    # Subjcts
-    lp2Topics = ['SOLID', ' Design Patterns', 'Delegates', 'file Management',
-                 'Threads', 'Events', 'Atributes']
     lp2Projects = ['https://github.com/malmaboy/wolf_and_sheepsLP2',
                    'https://github.com/JMatos1221/LP2_Recurso',
                    'https://github.com/malmaboy/NasaProject_LP2',
@@ -30,14 +27,35 @@ def about_view(request):
     aiTopics = ['Decicion Trees', 'Procedural Generation', 'Path Fiding',
                 'Algorithm Family Minimax', 'Machine Learning']
     data = datetime.datetime.today().year
+
+
+
+    # Subjects
     LP2 = models.Subject.objects.get(id=1)
-    AI = models.Subject.objects.get(id=2)
+    PW = models.Subject.objects.get(id=2)
+    AI = models.Subject.objects.get(id=3)
     # suject_3 = models.Subject.objects.get(id=2)
 
+    # Subject Topics
+    lp2Topics = models.Topics.objects.all().filter(topicsSubject="LP2")
+    aiTopics = models.Topics.objects.all().filter(topicsSubject="AI")
+
+    #Programming Languages
+    programmingLanguages = models.ProgrammingLanguages.objects.all()
+    others = models.NonProgrammingLanguages.objects.all()
     context = {
-        'ano':data,
+        #data
+        'ano': data,
+        #subjects
         'LP2': LP2,
-        'AI': AI
+        'AI': AI,
+        'PW': PW,
+        #Programing Languagens
+        'Languages': programmingLanguages,
+        'Others': others,
+        #Topics
+        'LP2Topics': lp2Topics,
+        'AITopics': aiTopics
 
     }
 
@@ -62,6 +80,6 @@ def product_view(request):
     data = datetime.datetime.today().year
 
     context = {
-        'ano':data
+        'ano': data
     }
     return render(request, 'portfolio/products.html', context)

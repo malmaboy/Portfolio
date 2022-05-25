@@ -2,12 +2,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block head %}
     <meta charset="UTF-8">
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio/css/contact.css' %}" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="author" content="Hugo Carvalho">
     <title>Title</title>
+    {% endblock %}
 </head>
 <body>
 

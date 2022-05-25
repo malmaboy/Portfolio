@@ -34,7 +34,7 @@
     display: grid;
     position: relative;
     grid-template-rows: 1fr;
-    top: 20vw;
+    top: 5vw;
 }
 
 .final > div:first-child{

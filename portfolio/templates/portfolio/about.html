@@ -1,11 +1,16 @@
  {% extends 'portfolio/layout.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="author" content="Hugo Carvalho">
+        <link rel="stylesheet" href="{% static 'portfolio/css/aboutMe.css' %}" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
     <title>Title</title>
+    {% endblock %}
 </head>
 <body>
 
@@ -33,8 +38,8 @@
             <h1><b>Subjects</b></h1>
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{LP2name}}, ETCS: {{ LP2etcs }},
-                        {{ LP2semester }}, {{ LP2lectiveYear }}
+                    <div><h3> {{LP2.subjectName}}, ETCS: {{ LP2.ects }},
+                        {{ LP2.semester }}, {{ LP2.lective_Year }}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
@@ -58,11 +63,10 @@
         </section>
         <section class="subject">
 
-            <h1><b>Subjects</b></h1>
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{AIName}}, ETCS: {{ AIetcs }}, {{ AISemester }},
-                        {{  AIlectiveYear}}
+                    <div><h3> {{AI.subjectName}}, ETCS: {{ AI.ects }}, {{ AI.semester }},
+                        {{  AI.lective_Year}}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
@@ -83,10 +87,10 @@
             </div>
         </section>   <section class="subject">
 
-            <h1><b>Subjects</b></h1>
+
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{LP2name}}, ETCS: {{ LP2etcs }}, {{ LP2semester }}
+                    <div><h3> {{LP2.subjectName}}, ETCS: {{ LP2.ects }}, {{ LP2.semester }}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
@@ -117,9 +121,17 @@
                         <h2>Programming Languages</h2>
                         <div>
                             <ul>
-                                <li>C#</li>
+                                {% for lang in Languages %}
+                                    <li>{{ lang }}</li>
+                                {% endfor %}
                             </ul>
                         </div>
+                        <h2>Others</h2>
+                        <ul>
+                            {% for other in Others  %}
+                                <li>{{ other }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
 
                     <div>
