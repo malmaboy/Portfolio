@@ -18,7 +18,7 @@ class Topics(models.Model):
 
 class Projects(models.Model):
     projectName = models.CharField(max_length=50)
-    projectLink = models.TextField(max_length=100)
+    projectLink = models.TextField(max_length=200)
     projectDescription = models.TextField(max_length=500, default=2)
 
     def __str__(self):

@@ -28,8 +28,6 @@ def about_view(request):
                 'Algorithm Family Minimax', 'Machine Learning']
     data = datetime.datetime.today().year
 
-
-
     # Subjects
     LP2 = models.Subject.objects.get(id=1)
     PW = models.Subject.objects.get(id=2)
@@ -40,22 +38,27 @@ def about_view(request):
     lp2Topics = models.Topics.objects.all().filter(topicsSubject="LP2")
     aiTopics = models.Topics.objects.all().filter(topicsSubject="AI")
 
-    #Programming Languages
+    # Programming Languages
     programmingLanguages = models.ProgrammingLanguages.objects.all()
     others = models.NonProgrammingLanguages.objects.all()
+
+
     context = {
-        #data
+        # data
         'ano': data,
-        #subjects
+        # subjects
         'LP2': LP2,
         'AI': AI,
         'PW': PW,
-        #Programing Languagens
+        # Programing Languagens
         'Languages': programmingLanguages,
         'Others': others,
-        #Topics
+        # Topics
         'LP2Topics': lp2Topics,
-        'AITopics': aiTopics
+        'AITopics': aiTopics,
+
+        # Projects
+
 
     }
 
@@ -79,7 +82,15 @@ def contact_view(request):
 def product_view(request):
     data = datetime.datetime.today().year
 
+    # Projects
+    beiramar = models.Projects.objects.all().filter(projectName="Beira-Mar!")
+    loctans = models.Projects.objects.all().filter(projectName="Loctan's Adventure")
+    redemption = models.Projects.objects.all().filter(projectName="Redemption: The Deadly Sin")
+
     context = {
-        'ano': data
+        'ano': data,
+        'beira-mar': beiramar,
+        'loctans': loctans,
+        'redemption': redemption,
     }
     return render(request, 'portfolio/products.html', context)
