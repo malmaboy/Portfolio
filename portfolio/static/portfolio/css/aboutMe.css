@@ -1,11 +1,28 @@
-*{
+main{
+    background-image: url("../../portfolio/images/AboutImage.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+}
+
+
+#image{
+
+    background: rgba(0, 0, 0, .1);
+
+
+
+}
+
+body{
+
 
 }
 
 
-
 .resume{
     font-size: 35px;
+
 }
 .resume h3{
     /*Letter in center*/
@@ -52,6 +69,23 @@ h1{
 .projects a:link{
     font-style: oblique;
 
+}
+
+.skills  ul {
+    font-size: 20px;
+    color: white;
+}
+
+.skills h2{
+    font-size: 30px;
+    text-shadow: 2px 2px 4px black;
+    color: white;
+
+}
+
+.phrases{
+    font-size: 20px;
+    color: white;
 }
 
 

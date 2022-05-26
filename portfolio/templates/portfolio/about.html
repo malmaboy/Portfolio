@@ -9,13 +9,17 @@
     <meta name="author" content="Hugo Carvalho">
         <link rel="stylesheet" href="{% static 'portfolio/css/aboutMe.css' %}" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
-    <title>Title</title>
+    <title>About me</title>
     {% endblock %}
 </head>
 <body>
 
 
+
     {% block main %}
+
+        <div id="image" class="image">
+
         <section>
                  <div class="resume">
                   <h3>About me</h3>
@@ -90,23 +94,20 @@
 
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{LP2.subjectName}}, ETCS: {{ LP2.ects }}, {{ LP2.semester }}
+                    <div><h3> {{PW.subjectName}}, ETCS: {{ PW.ects }}, {{ PW.semester }}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
                         <ul>
-                            {% for AItopic in AITopics %}
-                            <li>{{  AItopic }}</li>
+                            {% for pwTopics in PWTopics %}
+                            <li>{{  pwTopics }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                     <div class="projects">
                         <h3>Projects</h3>
                         <ul>
-                            <li><a href='https://github.com/malmaboy/wolf_and_sheepsLP2'>Wolf and Sheeps</a></li>
-                            <li><a href='https://github.com/JMatos1221/LP2_Recurso'>Rock,Paper and Scissors Simulatio</a></li>
-                            <li><a href='https://github.com/malmaboy/NasaProject_LP2'>Nasa Project</a></li>
-                            <li><a href='https://github.com/malmaboy/Snakes_And_Ladders_LP1'>Snakes and Ladders</a></li>
+                            <li><a href='https://a21901624-pw-lab.herokuapp.com/'>Labs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -126,7 +127,7 @@
                                 {% endfor %}
                             </ul>
                         </div>
-                        <h2>Others</h2>
+                        <h2>Known Technologies</h2>
                         <ul>
                             {% for other in Others  %}
                                 <li>{{ other }}</li>
@@ -135,10 +136,31 @@
                     </div>
 
                     <div>
+                        <h2>Languages Spoken</h2>
 
+                        <ul>
+                            <li>Portuguese(Fluent)</li>
+                            <li>English</li>
+                        </ul>
                     </div>
                 </div>
         </section>
+        <br>
+        <section class="phrases">
+            <p>
+                {% for d in Description %}
+                    {% if d.number == 1 %}
+                        {{ d.description }}
+                    {% endif %}
+                {% endfor %}
+
+             </p>
+
+        </section>
+
+        </div>
+
+
     {% endblock %}
 
 

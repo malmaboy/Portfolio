@@ -19,13 +19,6 @@ def home_page_view(request):
 
 
 def about_view(request):
-    lp2Projects = ['https://github.com/malmaboy/wolf_and_sheepsLP2',
-                   'https://github.com/JMatos1221/LP2_Recurso',
-                   'https://github.com/malmaboy/NasaProject_LP2',
-                   'https://github.com/malmaboy/wolf_and_sheepsLP2']
-
-    aiTopics = ['Decicion Trees', 'Procedural Generation', 'Path Fiding',
-                'Algorithm Family Minimax', 'Machine Learning']
     data = datetime.datetime.today().year
 
     # Subjects
@@ -37,11 +30,14 @@ def about_view(request):
     # Subject Topics
     lp2Topics = models.Topics.objects.all().filter(topicsSubject="LP2")
     aiTopics = models.Topics.objects.all().filter(topicsSubject="AI")
+    pwTopics = models.Topics.objects.all().filter(topicsSubject="PW")
 
     # Programming Languages
     programmingLanguages = models.ProgrammingLanguages.objects.all()
     others = models.NonProgrammingLanguages.objects.all()
 
+    # Description
+    description = models.Description.objects.all()
 
     context = {
         # data
@@ -56,9 +52,11 @@ def about_view(request):
         # Topics
         'LP2Topics': lp2Topics,
         'AITopics': aiTopics,
-
+        'PWTopics': pwTopics,
         # Projects
 
+        # Description
+        'Description': description,
 
     }
 
@@ -94,3 +92,19 @@ def product_view(request):
         'redemption': redemption,
     }
     return render(request, 'portfolio/products.html', context)
+
+
+def blog_view(request):
+    context = {
+
+    }
+
+    return render(request, 'portfolio/blog.html', context)
+
+
+def pw_view(request):
+    context = {
+
+    }
+
+    return render(request, 'portfolio/PW.html', context)

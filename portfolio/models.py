@@ -54,3 +54,8 @@ class NonProgrammingLanguages(models.Model):
         return self.name
 
 
+class Description(models.Model):
+    description = models.TextField(max_length=4000)
+    number = models.IntegerField(default=1)
+
+
