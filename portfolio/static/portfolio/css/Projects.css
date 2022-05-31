@@ -1,0 +1,66 @@
+main h1{
+    text-align: center;
+    padding-top: 15vh;
+}
+
+main{
+    background-image: url("../../portfolio/images/Loctans_Adventure_-_Capa.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+section{
+
+}
+
+.Projects
+{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+
+}
+
+
+.Projects > div
+{
+
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 5px 5px 15px black;
+    align-content: center;
+}
+
+.ProjectName{
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px darkgrey;
+}
+
+.ProjectDescription{
+     text-align: center;
+}
+
+.Projects > div a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+
+
+.Projects > div a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.Projects > div a:link{
+    color: black;
+    text-decoration: none;
+}

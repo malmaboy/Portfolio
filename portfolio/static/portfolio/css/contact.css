@@ -28,6 +28,12 @@
 
 .contact div div a:visited{
     background-color: blue;
+    text-decoration: none;
+}
+
+.contact div div a:link{
+    text-decoration: none;
+    color: white;
 }
 
 .final > div{
@@ -55,5 +61,6 @@
 
 .cv button:hover{
      background-color: RoyalBlue;
+    text-decoration: none;
 }
 

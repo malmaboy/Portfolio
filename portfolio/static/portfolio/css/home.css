@@ -1,17 +1,16 @@
 #video{
-
+  position: fixed;
+  width: 100vw;
+  height: 85vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 10vh;
+  bottom: 0;
 }
 
 .video{
-     /* Telling our absolute positioned video to
-  be relative to this element */
-  position: relative;
 
-
-
-  /* Will not allow the video to overflow the
-  container */
-  overflow: hidden;
 
 }
 

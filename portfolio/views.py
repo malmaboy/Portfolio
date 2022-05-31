@@ -77,7 +77,7 @@ def contact_view(request):
     return render(request, 'portfolio/contact.html', context)
 
 
-def product_view(request):
+def project_view(request):
     data = datetime.datetime.today().year
 
     # Projects
@@ -91,7 +91,7 @@ def product_view(request):
         'loctans': loctans,
         'redemption': redemption,
     }
-    return render(request, 'portfolio/products.html', context)
+    return render(request, 'portfolio/Projects.html', context)
 
 
 def blog_view(request):
