@@ -1,19 +1,18 @@
-#video{
-  position: fixed;
-  width: 100vw;
-  height: 85vh;
+main{
+  padding: 0px 0px;
+}
+
+.video {
+height: 85vh;
+width: 100%;
+
+}
+
+
+.video video {
   object-fit: cover;
-  left: 0;
-  right: 0;
-  top: 10vh;
-  bottom: 0;
+  object-position: center;
+  height: inherit;
+  width: inherit;
 }
-
-.video{
-
-
-}
-
-
-
 

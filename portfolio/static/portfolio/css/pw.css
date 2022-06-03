@@ -1,0 +1,76 @@
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.techModules,
+.labs,
+.news,
+.about-website {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.tech,
+.lab,
+.new {
+  border: 2px solid black;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  width: 400px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 5px 2px 15px black;
+}
+
+.tech:hover,
+.lab:hover,
+.new:hover {
+  box-shadow: 5px 2px 15px blue;
+}
+
+.tech > div,
+.news > div,
+.labs > div {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+.tech a,
+.news a,
+.labs a {
+  text-decoration: none;
+  color: black;
+}
+
+/* about website  */
+
+
+
+.about-website div {
+  border: 2px solid black;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  width: 400px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 5px 2px 15px black;
+}
+
+h3 {
+  margin-top: 12px;
+  text-align: center;
+}

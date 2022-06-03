@@ -1,4 +1,8 @@
+import datetime
+import urllib.request
 from django.db import models
+from django.core.files import File
+import os
 
 
 # Create your models here.
@@ -57,5 +61,37 @@ class NonProgrammingLanguages(models.Model):
 class Description(models.Model):
     description = models.TextField(max_length=4000)
     number = models.IntegerField(default=1)
+
+
+class Tech(models.Model):
+    name = models.CharField(max_length=50)
+    acronym = models.CharField(max_length=5)
+    creatorName = models.CharField(max_length=30)
+    creationYear = models.IntegerField(max_length=4)
+    link = models.CharField(max_length=200)
+    description = models.TextField(max_length=1000)
+    imageUrl = models.URLField(default="url")
+
+
+class labs(models.Model):
+    title = models.CharField(max_length=100)
+    link = models.URLField()
+    description = models.TextField(default="Description")
+
+
+class news(models.Model):
+    title = models.CharField(max_length=20)
+    description = models.TextField(default="Text")
+    imgLink = models.URLField()
+    newsLink = models.URLField(default="URl")
+
+
+class BlogsAnswers(models.Model):
+    titulo = models.CharField(max_length=10)
+    firstName = models.CharField(max_length=50)
+    lastName = models.CharField(max_length=50)
+    data = datetime.date.today()
+    description = models.CharField(max_length=500)
+    imageUrl = models.URLField()
 
 

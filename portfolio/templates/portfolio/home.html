@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio/css/home.css' %}" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="author" content="Hugo Carvalho">
     <title>Home</title>
@@ -17,14 +16,10 @@
 
     {% block main %}
         {%  load static %}
-        <subject class="video">
-             <video id="video" autoplay muted loop >
-            <source src="
-{% static 'portfolio/videos/Redemption The Deadly Sin - Trailer.mp4' %} "
-                    type="video/mp4">
-
+        <div class="video">
+             <video id="video" autoplay muted loop src="{% static 'portfolio/videos/Redemption The Deadly Sin - Trailer.mp4' %}">
         </video>
-        </subject>
+    </div>
     {% endblock %}
 
 </body>

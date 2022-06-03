@@ -103,8 +103,22 @@ def blog_view(request):
 
 
 def pw_view(request):
-    context = {
+    Tech = models.Tech.objects.all()
+    Labs = models.labs.objects.all()
+    News = models.news.objects.all()
 
+    HTML = models.Tech.objects.all().filter(name="HTML")
+    CSS = models.Tech.objects.all().filter(name="CSS")
+    Boostrap = models.Tech.objects.all().filter(name="Bootstrap")
+
+    context = {
+        'HTML': HTML,
+        'CSS': CSS,
+        'Bootstrap': Boostrap,
+
+        'Tech': Tech,
+        'Labs': Labs,
+        'News': News
     }
 
     return render(request, 'portfolio/PW.html', context)

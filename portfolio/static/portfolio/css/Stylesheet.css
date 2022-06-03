@@ -1,34 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Open+Sans:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Open+Sans:ital,wght@1,300&display=swap");
 
-
-*{
-    font-family: "Gill Sans";
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
-    
+* {
+  font-family: "Gill Sans";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    border: solid black 2px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border: solid black 2px;
 
-
-    /* alinhando logo e menu */
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-
+  /* alinhando logo e menu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  z-index: 1;
 }
 
 header div {
@@ -37,61 +34,56 @@ header div {
 }
 
 header nav {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
 }
-
-
 
 header nav a {
   padding: 0 1em;
   text-decoration: none;
   font-size: 1.2rem;
   color: blue;
-
 }
 
-header nav a:first-child{
-    color: white;
-    background-color: blue;
-    border: solid blue 1px;
-    border-radius: 20px;
+header nav a:first-child {
+  color: white;
+  background-color: blue;
+  border: solid blue 1px;
+  border-radius: 20px;
 }
 
 /*Header Buttons*/
 
-.headerButtons div > a:hover{
-    color: dimgrey;
+.headerButtons div > a:hover {
+  color: dimgrey;
 }
-
-
 
 main {
-    min-height: 85vh;
-    width: 100%;
-    background-color:grey;
-    padding: 4em 4em;
+  min-height: 85vh;
+  width: 100%;
+  background-color: grey;
+  padding: 4em 4em;
 }
 
-footer{
-    border: solid black 2px;
-    height: 5vh;
+footer,
+footer:hover,
+footer:link {
+  border: solid black 2px;
+  height: 5vh;
+  z-index: 1;
 }
 
-footer div
-{
-
-    display: grid;
-    margin-top: auto;
-    color: black;
-    background-color: white;
-    grid-template-columns: 2fr 2fr;
+footer div,
+footer a:hover,
+footer a:link {
+  text-decoration: none;
+  display: grid;
+  margin-top: auto;
+  color: blue;
+  background-color: white;
+  grid-template-columns: 3fr 2fr;
 }
 
-footer div:first-child{
-    padding-left: 15px;
+footer div:first-child {
+  padding-left: 15px;
 }
-
-
-
-

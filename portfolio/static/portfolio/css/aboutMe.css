@@ -9,9 +9,6 @@ main{
 #image{
 
     background: rgba(0, 0, 0, .1);
-
-
-
 }
 
 body{
@@ -22,7 +19,7 @@ body{
 
 .resume{
     font-size: 35px;
-
+    color: white;
 }
 .resume h3{
     /*Letter in center*/
@@ -66,9 +63,14 @@ h1{
 /* Links*/
 
 
-.projects a:link{
+.projects a{
     font-style: oblique;
+    text-decoration: underline;
+    color: white;
+}
 
+.projects a:hover{
+    font-weight: bold;
 }
 
 .skills  ul {
