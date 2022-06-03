@@ -71,11 +71,17 @@ class Tech(models.Model):
     description = models.TextField(max_length=1000)
     imageUrl = models.URLField(default="url")
 
+    def __str__(self):
+        return self.name
+
 
 class labs(models.Model):
     title = models.CharField(max_length=100)
     link = models.URLField()
     description = models.TextField(default="Description")
+
+    def __str__(self):
+        return self.name
 
 
 class news(models.Model):
@@ -84,13 +90,19 @@ class news(models.Model):
     imgLink = models.URLField()
     newsLink = models.URLField(default="URl")
 
+    def __str__(self):
+        return self.name
+
 
 class BlogsAnswers(models.Model):
     titulo = models.CharField(max_length=10)
     firstName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
-    data = datetime.date.today()
+   # data = datetime.date.today()
     description = models.CharField(max_length=500)
     imageUrl = models.URLField()
+
+    def __str__(self):
+        return self.name
 
 
