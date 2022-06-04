@@ -92,14 +92,17 @@ def project_view(request):
 
 
 def blog_view(request):
-    context = {
+    data = datetime.datetime.today().year
 
+    context = {
+        'ano': data,
     }
 
     return render(request, 'portfolio/blog.html', context)
 
 
 def pw_view(request):
+    data = datetime.datetime.today().year
     Tech = models.Tech.objects.all()
     Labs = models.labs.objects.all()
     News = models.news.objects.all()
@@ -109,6 +112,7 @@ def pw_view(request):
     Boostrap = models.Tech.objects.all().filter(name="Bootstrap")
 
     context = {
+        'ano': data,
         'HTML': HTML,
         'CSS': CSS,
         'Bootstrap': Boostrap,
