@@ -71,7 +71,7 @@ class Tech(models.Model):
     link = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
     imageUrl = models.URLField(default="url")
-    #creationYear = models.IntegerField(default=1 )
+    year = models.IntegerField(default=1)
     def __str__(self):
         return self.name
 
@@ -99,7 +99,7 @@ class BlogsAnswers(models.Model):
     titulo = models.CharField(max_length=10)
     firstName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
-   # data = datetime.date.today()
+    data = datetime.date.today()
     description = models.CharField(max_length=500)
     imageUrl = models.URLField()
 
