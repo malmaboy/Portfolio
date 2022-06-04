@@ -71,7 +71,7 @@ class Tech(models.Model):
     link = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
     imageUrl = models.URLField(default="url")
-    creationYear = models.IntegerField()
+    creationYear = models.IntegerField(default=1 )
     def __str__(self):
         return self.name
 
