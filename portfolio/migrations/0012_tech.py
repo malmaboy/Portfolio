@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=50)),
                 ('acronym', models.CharField(max_length=5)),
                 ('creatorName', models.CharField(max_length=30)),
-                ('creationYear', models.DateTimeField()),
+                ('creationYear', models.IntegerField(default=1)),
                 ('link', models.CharField(max_length=200)),
                 ('description', models.TextField(max_length=1000)),
             ],
