@@ -7,9 +7,6 @@ from portfolio import models
 
 
 def home_page_view(request):
-    agora = datetime.datetime.now()
-    local = 'Lisboa'
-    topicos = ['HTML', 'CSS', 'Python', 'Django', 'JavaScript']
     data = datetime.datetime.today().year
 
     context = {
