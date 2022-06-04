@@ -1,4 +1,5 @@
 import datetime
+from statistics import mode
 import urllib.request
 from django.db import models
 from django.core.files import File
@@ -70,7 +71,7 @@ class Tech(models.Model):
     link = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
     imageUrl = models.URLField(default="url")
-
+    creationYear = models.IntegerField()
     def __str__(self):
         return self.name
 
