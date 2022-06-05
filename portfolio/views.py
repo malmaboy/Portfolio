@@ -78,15 +78,12 @@ def project_view(request):
     data = datetime.datetime.today().year
 
     # Projects
-    beiramar = models.Projects.objects.all().filter(projectName="Beira-Mar!")
-    loctans = models.Projects.objects.all().filter(projectName="Loctan's Adventure")
-    redemption = models.Projects.objects.all().filter(projectName="Redemption: The Deadly Sin")
+    projects = models.Projects.objects.all()
+
 
     context = {
         'ano': data,
-        'beira-mar': beiramar,
-        'loctans': loctans,
-        'redemption': redemption,
+        'projects': projects,
     }
     return render(request, 'portfolio/Projects.html', context)
 

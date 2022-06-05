@@ -19,70 +19,24 @@
 
         <div class="Projects">
 
-            <div>
+            {% for project in projects %}
+                  <div>
 
-                <a href="https://www.youtube.com/watch?v=Q9KXA4SjFzY">
-                    <div class="ProjectName"><h4> Beira Mar!</h4></div>
+                <a href="{{ projects.projectLink }}">
+                    <div class="ProjectName"><h4> {{ project.projectName }} </h4></div>
                     <br>
                     <div class="ProjectDescription">
-                        <p> Beira Mar! is a 3D serious game, where you have to collect different seashells on an island, so you can
-                            complete the collections. This game was specially created for people with cognitive and physical
-                            disabilities.</p>
+                        <p> {{ project.projectDescription }}</p>
+                    </div>
+                    <div class="image">
+                        <img src="{{ project.projectImage.url }}">
                     </div>
                 </a>
 
             </div>
+            {% endfor %}
 
-
-            <div>
-                <a href="https://www.youtube.com/watch?v=L5SOX6C_NtE">
-                    <div class="ProjectName"><h4> Loctan's Adventures</h4></div>
-                    <br>
-                    <div class="ProjectDescription">
-                        <p> Loctan's Adventures is a 3D third-person action puzzle game, where you play as Loctan, trying to return to his planet after being forced to leave, in order to protect a
-                            powerful relic, a necklace, which in the wrong hands, could cause chaos.
-                            Loctan ends up on planet Earth where everything is giant compared to him and has to repair his spaceship to go home.</p>
-                    </div>
-                </a>
-
-            </div>
-
-
-            <div>
-                <a href="https://www.youtube.com/watch?v=hVwglx1hIG0">
-                    <div class="ProjectName"><h4> Redemption: The Deadly Sin</h4></div>
-                    <br>
-                    <div class="ProjectDescription">
-                        <p> Redemption: The Deadly Sin is a first-person puzzle game,
-                            where you played as Detective Jackson, investigating crimes committed by a religious maniac,
-                            who killed his daughter through pain during an attempt to educate her on religion.
-                            Feeling guilty, he then kept going by torturing those who didn't believe in God,
-                            attempting to convert them, even if it meant their death.
-                        </p>
-                    </div>
-                </a>
-
-
-            </div>
-
-            <div>
-                <a href="https://www.indiedb.com/games/alter">
-                    <div class="ProjectName"><h4> Alter</h4></div>
-                    <br>
-                    <div class="ProjectDescription">
-                        <p> Alter is a first-person puzzle game where you play as Layla,
-                            a girl who was kidnapped and taken to medical facilities owned by a shady organization, where she was submitted to multiple experiments,
-                            ending up with multiple personalities and a shape-shifting body.
-                            Layla has to solve puzzles, that the organization submits her to,
-                            while also trying to escape the facility by using her multiple personalities.
-                        </p>
-                    </div>
-                </a>
-
-            </div>
         </div>
-
-
     </section>
 
 

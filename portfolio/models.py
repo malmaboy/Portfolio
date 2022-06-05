@@ -24,10 +24,11 @@ class Topics(models.Model):
 class Projects(models.Model):
     projectName = models.CharField(max_length=50)
     projectLink = models.TextField(max_length=200)
+    projectImage = models.ImageField(upload_to='ProjectImages/')
     projectDescription = models.TextField(max_length=500, default=2)
 
     def __str__(self):
-        return self.projectName, self.projectLink
+        return self.projectName
 
 
 class Subject(models.Model):
@@ -70,7 +71,7 @@ class Tech(models.Model):
     creatorName = models.CharField(max_length=30)
     link = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
-    imageUrl = models.URLField(default="url")
+    image = models.ImageField(upload_to='TechImages/')
     year = models.IntegerField(default=1)
 
     def __str__(self):
@@ -89,7 +90,7 @@ class labs(models.Model):
 class news(models.Model):
     title = models.CharField(max_length=20)
     description = models.TextField(default="Text")
-    imgLink = models.URLField()
+    image = models.ImageField(upload_to='newsImages/')
     newsLink = models.URLField(default="URl")
 
     def __str__(self):
@@ -102,7 +103,7 @@ class BlogsAnswers(models.Model):
     lastName = models.CharField(max_length=50)
     data = datetime.date.today()
     description = models.CharField(max_length=500)
-    imageUrl = models.URLField()
+    image = models.ImageField(upload_to='blogImages/')
 
     def __str__(self):
-        return self.name
+        return self.titulo
