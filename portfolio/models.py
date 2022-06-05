@@ -88,7 +88,7 @@ class labs(models.Model):
 
 
 class news(models.Model):
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=100)
     description = models.TextField(default="Text")
     image = models.ImageField(upload_to='newsImages/')
     newsLink = models.URLField(default="URl")
