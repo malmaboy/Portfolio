@@ -29,14 +29,13 @@
         <div class="techModules">
           {% for tech in Tech%}
 
-          <div class="tech">
+          <div class="tech" style="background-image: url({{ tech.image.url }}) ">
             <a href="{{ tech.link }}">
                 <div><h3>{{ tech.name }}</h3></div>
                 <div>{{ tech.acronym }}</div>
                 <div>Creator:{{ tech.creatorName }}</div>
                 <div>Creation Year:{{ tech.year }}</div>
                 <div>{{ tech.description }}</div>
-                <div><img src="{{ tech.imageUrl }}" /></div>
             </a>
           </div>
           {% endfor %}
