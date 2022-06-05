@@ -72,6 +72,7 @@ class Tech(models.Model):
     description = models.TextField(max_length=1000)
     imageUrl = models.URLField(default="url")
     year = models.IntegerField(default=1)
+
     def __str__(self):
         return self.name
 
@@ -92,7 +93,7 @@ class news(models.Model):
     newsLink = models.URLField(default="URl")
 
     def __str__(self):
-        return self.name
+        return self.title
 
 
 class BlogsAnswers(models.Model):
@@ -105,5 +106,3 @@ class BlogsAnswers(models.Model):
 
     def __str__(self):
         return self.name
-
-

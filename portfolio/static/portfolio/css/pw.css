@@ -70,6 +70,12 @@ h2 {
   box-shadow: 5px 2px 15px black;
 }
 
+.about-website div
+{
+  width: 600px;
+  height: 500px;
+}
+
 h3 {
   margin-top: 12px;
   text-align: center;

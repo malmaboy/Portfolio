@@ -1,40 +1,39 @@
- {% extends 'portfolio/layout.html' %}
+{% extends 'portfolio/layout.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     {% block head %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="author" content="Hugo Carvalho">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="author" content="Hugo Carvalho">
         <link rel="stylesheet" href="{% static 'portfolio/css/aboutMe.css' %}" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
-    <title>About me</title>
+        <title>About me</title>
     {% endblock %}
 </head>
 <body>
 
 
+{% block main %}
 
-    {% block main %}
-
-        <div id="image" class="image">
+    <div id="image" class="image">
 
         <section>
-                 <div class="resume">
-                  <h3>About me</h3>
-        <p>     Student of Video Game Development at Universidade Lusófona De Humanidades e Tecnologias.
-            Currently, developing my skills in Unity and C# programming and
-            also Python, HTML, and CSS.</p>
+            <div class="resume">
+                <h3>About me</h3>
+                <p> Student of Video Game Development at Universidade Lusófona De Humanidades e Tecnologias.
+                    Currently, developing my skills in Unity and C# programming and
+                    also Python, HTML, and CSS.</p>
 
-        <p>For my graduation final project,
-            I'm developing a project called Alter,
-            a first-person puzzle game where you play as Layla,
-            a girl with a polymorphic body.</p>
+                <p>For my graduation final project,
+                    I'm developing a project called Alter,
+                    a first-person puzzle game where you play as Layla,
+                    a girl with a polymorphic body.</p>
 
-        <p>I am interested in developing entertainment games, improving my skills,
-            and better understanding the mechanisms behind the creation of video games.</p>
-        </div>
+                <p>I am interested in developing entertainment games, improving my skills,
+                    and better understanding the mechanisms behind the creation of video games.</p>
+            </div>
         </section>
 
         <section class="subject">
@@ -42,14 +41,16 @@
             <h1><b>Subjects</b></h1>
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{LP2.subjectName}}, ETCS: {{ LP2.ects }},
-                        {{ LP2.semester }}, {{ LP2.lective_Year }}
+                    <div><h3>
+                        {{ LP2.subjectName }}, ETCS: {{ LP2.ects }},
+                        Semester: {{ LP2.semester }}, {{ LP2.lective_Year }},
+                        Professor : {{ LP2.professor }}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
                         <ul>
                             {% for LP2Topic in LP2Topics %}
-                            <li>{{  LP2Topic }}</li>
+                                <li>{{ LP2Topic }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -65,18 +66,22 @@
                 </div>
             </div>
         </section>
+
+
         <section class="subject">
 
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{AI.subjectName}}, ETCS: {{ AI.ects }}, {{ AI.semester }},
-                        {{  AI.lective_Year}}
+                    <div><h3>
+                        {{ AI.subjectName }}, ETCS: {{ AI.ects }},
+                        Semester: {{ AI.semester }}, {{ AI.lective_Year }},
+                        Professor : {{ AI.professor }}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
                         <ul>
                             {% for AItopic in AITopics %}
-                            <li>{{  AItopic }}</li>
+                                <li>{{ AItopic }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -89,18 +94,24 @@
                     </div>
                 </div>
             </div>
-        </section>   <section class="subject">
+        </section>
+
+
+        <section class="subject">
 
 
             <div class="subjects">
                 <div class="lp2">
-                    <div><h3> {{PW.subjectName}}, ETCS: {{ PW.ects }}, {{ PW.semester }}
+                    <div><h3>
+                        {{ PW.subjectName }}, ETCS: {{ PW.ects }},
+                        Semester: {{ PW.semester }}, {{ PW.lective_Year }},
+                        Professor : {{ PW.professor }}
                     </h3></div>
                     <div>
                         <h3>Topics</h3>
                         <ul>
                             {% for pwTopics in PWTopics %}
-                            <li>{{  pwTopics }}</li>
+                                <li>{{ pwTopics }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -115,35 +126,35 @@
         </section>
 
         <section class="skills">
-                <div>
-                    <h1>Personal skills and competences</h1>
+            <div>
+                <h1>Personal skills and competences</h1>
 
+                <div>
+                    <h2>Programming Languages</h2>
                     <div>
-                        <h2>Programming Languages</h2>
-                        <div>
-                            <ul>
-                                {% for lang in Languages %}
-                                    <li>{{ lang }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <h2>Known Technologies</h2>
                         <ul>
-                            {% for other in Others  %}
-                                <li>{{ other }}</li>
+                            {% for lang in Languages %}
+                                <li>{{ lang }}</li>
                             {% endfor %}
                         </ul>
                     </div>
-
-                    <div>
-                        <h2>Languages Spoken</h2>
-
-                        <ul>
-                            <li>Portuguese(Fluent)</li>
-                            <li>English</li>
-                        </ul>
-                    </div>
+                    <h2>Known Technologies</h2>
+                    <ul>
+                        {% for other in Others %}
+                            <li>{{ other }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
+
+                <div>
+                    <h2>Languages Spoken</h2>
+
+                    <ul>
+                        <li>Portuguese(Fluent)</li>
+                        <li>English</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <br>
         <section class="phrases">
@@ -154,15 +165,14 @@
                     {% endif %}
                 {% endfor %}
 
-             </p>
+            </p>
 
         </section>
 
-        </div>
+    </div>
 
 
-    {% endblock %}
-
+{% endblock %}
 
 
 </body>

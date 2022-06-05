@@ -65,17 +65,20 @@ main {
   padding: 4em 4em;
 }
 
-footer,
-footer:hover,
-footer:link {
+footer {
   border: solid black 2px;
   height: 5vh;
   z-index: 1;
 }
 
+footer a:hover{
+  color: dimgray;
+  font-weight: bold;
+}
+
 footer div,
-footer a:hover,
-footer a:link {
+footer a,
+footer a {
   text-decoration: none;
   display: grid;
   margin-top: auto;

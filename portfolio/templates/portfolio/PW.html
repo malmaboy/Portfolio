@@ -30,13 +30,14 @@
           {% for tech in Tech%}
 
           <div class="tech">
-            <div><h3>{{ tech.name }}</h3></div>
-            <div>{{ tech.acronym }}</div>
-            <div>Creator:{{ tech.creatorName }}</div>
-            <div>Creation Year:{{ tech.year }}</div> 
-            <div><a href="{{ tech.link }}"> Link</a></div>
-            <div>{{ tech.description }}</div>
-            <div><img src="{{ tech.imageUrl }}" /></div>
+            <a href="{{ tech.link }}">
+                <div><h3>{{ tech.name }}</h3></div>
+                <div>{{ tech.acronym }}</div>
+                <div>Creator:{{ tech.creatorName }}</div>
+                <div>Creation Year:{{ tech.year }}</div>
+                <div>{{ tech.description }}</div>
+                <div><img src="{{ tech.imageUrl }}" /></div>
+            </a>
           </div>
           {% endfor %}
         </div>
@@ -48,7 +49,7 @@
         {% for lab in Labs %}
         <a href="{{ lab.link}}" class="labs">
           <div class="lab">
-            <div>{{ lab.title }}</div>
+            <div>{{ lab.name }}</div>
             <div>{{ lab.description }}</div>
           </div>
         </a>
@@ -75,37 +76,44 @@
     <section>
         <h2> About this website </h2>
 
-
-        <h3> DER diagram </h3>
-
-        <img src="" alt="" />
-
+            <h3> DER diagram </h3>
         <div class="about-website">
             
-           
+
                 
                 <div>
                     <!-- estrutura do site  -->
                     <h3> Website Struture</h3>
+
+                    <img src="{% static 'portfolio/images/DERDiagram.png' %}">
+
                 </div>
     
                 <div>
                     <!-- padrões usados   -->
                     <h3> Used Patterns</h3>
+
+                    <p> In this project it was used the MVC (Model View Controller) Pattern and Single Responsibility Principle. 
+                      The idea behind the SRP is that every class, module, 
+                      or function in a program should have one responsibility/purpose in a program.</p>
+                  
+                    
                 </div>
 
-
+                
             
 
         </div>
 
       <div class="quizz">
 
+          <h2> Quizz</h2>
         
       </div>
 
       <div class="examples-tecniques">
 
+          <h2>Example</h2>
 
 
       </div>
