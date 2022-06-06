@@ -3,7 +3,8 @@ import datetime
 
 from django.shortcuts import render
 
-from portfolio import models
+from portfolio import models, forms
+
 
 
 def home_page_view(request):
@@ -80,7 +81,6 @@ def project_view(request):
     # Projects
     projects = models.Projects.objects.all()
 
-
     context = {
         'ano': data,
         'projects': projects,
@@ -91,8 +91,25 @@ def project_view(request):
 def blog_view(request):
     data = datetime.datetime.today().year
 
+    form = forms.BlogForm(request.POST or None)
+
+    duplicade = False
+
+    if form.is_valid():
+        for blog in models.BlogsAnswers.objects.all():
+            if blog.description == form.instance.description:
+                duplicade = True
+
+            if not duplicade:
+                form.save()
+
+    form = forms.BlogForm()
+
+    blog = models.BlogsAnswers.objects.all()
     context = {
         'ano': data,
+        'blogs': blog,
+        'form': form,
     }
 
     return render(request, 'portfolio/blog.html', context)

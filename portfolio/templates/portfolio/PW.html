@@ -48,7 +48,7 @@
         {% for lab in Labs %}
         <a href="{{ lab.link}}" class="labs">
           <div class="lab">
-            <div>{{ lab.name }}</div>
+            <div> <h3>{{ lab.name }}</h3></div>
             <div>{{ lab.description }}</div>
           </div>
         </a>
@@ -59,12 +59,11 @@
 
       <div class="news">
         {% for news in News %}
-        <div class="new">
+        <div class="new" style="background-image: url({{ news.image }})">
           <a href="{{ news.newsLink }}">
             <div>
-              <div>{{ news.title }}</div>
+              <div> <h3>{{ news.title }}</h3></div>
               <div>{{ news.description}}</div>
-              <div><img src="{{ news.imgLink }}" /></div>
             </div>
           </a>
         </div>

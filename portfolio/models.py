@@ -1,12 +1,13 @@
 import datetime
+import time
 from statistics import mode
 import urllib.request
 from django.db import models
 from django.core.files import File
 import os
 
-
 # Create your models here.
+from django.utils import timezone
 
 
 class Topics(models.Model):
@@ -101,9 +102,8 @@ class BlogsAnswers(models.Model):
     titulo = models.CharField(max_length=10)
     firstName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
-    data = datetime.date.today()
-    description = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='blogImages/')
+    data = models.DateTimeField(default=timezone.now)
+    description = models.TextField(max_length=1000)
 
     def __str__(self):
         return self.titulo

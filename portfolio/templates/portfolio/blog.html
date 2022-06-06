@@ -3,24 +3,47 @@
 <html lang="en">
 <head>
     {% block head %}
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
         {% load static %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/blog.cs.css' %}" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="author" content="Hugo Carvalho">
-    <title>Blog</title>
+        <link rel="stylesheet" href="{% static 'portfolio/css/Stylesheet.css' %}" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="author" content="Hugo Carvalho">
+        <title>Blog</title>
     {% endblock %}
 </head>
 <body>
 
-    {% block main %}
+
+{% block main %}
+
+    <h2>Blogs published</h2>
+
+
+
+    {% for blog in blogs %}
+        <div class="blog">
+            <div><h3>{{ blog.titulo }}</h3></div>
+            <div>{{ blog.firstName }} {{ blog.lastName }}</div>
+            <div class="description">{{ blog.description }}</div>
+            <div>Date: {{ blog.data }}</div>
+        </div>
+    {% endfor %}
+
+    <h2>Publish a blog</h2>
+    <div class="form">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit">Post</button>
+        </form>
+    </div>
 
 
 
 
-    {% endblock %}
+{% endblock %}
 
 </body>
 </html>
