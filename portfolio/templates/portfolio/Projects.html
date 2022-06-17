@@ -39,6 +39,33 @@
         </div>
     </section>
 
+    <section>
+            <h2> Trabalhos Interressantes </h2>
+
+            <div class="tfcs">
+                {% for tfc in tfcs %}
+                    <a href="{{ tfc.reportLink }}">
+                        <div class="Title"> <h4>{{ tfc.title }}</h4></div>
+                        <div class="author">{{ tfc.author }}</div>
+                        <div class="advisor"> {{ tfc.advisor }}</div>
+                        <div class="imageT"> {{ tfc.image }}</div>
+                        <div class="year"> {{ tfc.year }}</div>
+                        <div> <a>{{ tfc.gitLink }}</a></div>
+                    </a>
+                {% endfor %}
+            </div>
+
+            <h2>Publish end of degree work </h2>
+            <div class="form">
+                <form action=""  method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Publish</button>
+                </form>
+            </div>
+
+    </section>
+
 
 {% endblock %}
 

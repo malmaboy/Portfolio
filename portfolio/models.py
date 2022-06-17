@@ -107,3 +107,13 @@ class BlogsAnswers(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+class tfcs(models.Model):
+    author = models.CharField(max_length=50)
+    advisor = models.CharField(max_length=50)
+    year = models.DateTimeField()
+    title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='tfcsImages/')
+    reportLink = models.CharField(max_length=500)
+    gitLink = models.CharField(max_length=500)

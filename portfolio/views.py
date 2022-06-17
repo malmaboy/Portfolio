@@ -81,9 +81,29 @@ def project_view(request):
     # Projects
     projects = models.Projects.objects.all()
 
+    # TFC
+
+    tfcs = models.tfcs.objects.all()
+    form = forms.TfcsForm(request.POST or None)
+    double = False
+
+    if form.is_valid():
+        for tfc in models.tfcs.objects.all():
+            if tfc.model.author == form.instance.author:
+                double = True
+
+            if not double:
+                form.save()
+
+    form = forms.TfcsForm
+
+
+
     context = {
         'ano': data,
         'projects': projects,
+        'tfcs': tfcs,
+        'form':form,
     }
     return render(request, 'portfolio/Projects.html', context)
 
