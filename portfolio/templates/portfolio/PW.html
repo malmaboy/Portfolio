@@ -62,8 +62,9 @@
         <div class="new" style="background-image: url({{ news.image }})">
           <a href="{{ news.newsLink }}">
             <div>
-              <div> <h3>{{ news.title }}</h3></div>
-              <div>{{ news.description}}</div>
+                <div> <h3>{{ news.title }}</h3></div>
+                <div>{{ news.description}}</div>
+                <div> <img src="{{ news.image.url }}"> </div>
             </div>
           </a>
         </div>
@@ -81,7 +82,7 @@
                 
                 <div>
                     <!-- estrutura do site  -->
-                    <h3> Website Struture</h3>
+                    <h3> Website Structure</h3>
 
                     <img src="{% static 'portfolio/images/DERDiagram.png' %}">
 
