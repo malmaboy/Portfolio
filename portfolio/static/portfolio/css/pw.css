@@ -89,3 +89,23 @@ h3 {
   margin-top: 12px;
   text-align: center;
 }
+
+
+.meter  {
+    border: solid black 2px;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 5px 2px 15px black;
+    border-radius: 20px;
+    flex-flow: column;
+    width: 400px;
+    height: 100%;
+    margin: 20px;
+    gap: 16px;
+}
+
+
+#meter{
+  display: flex;
+  justify-content: space-between;
+}
