@@ -112,7 +112,7 @@ class BlogsAnswers(models.Model):
 class tfcs(models.Model):
     author = models.CharField(max_length=50)
     advisor = models.CharField(max_length=50)
-    year = models.IntegerField(max_length=4, default=2022)
+    year = models.CharField(max_length=4, default="2022")
     title = models.CharField(max_length=50)
     image = models.ImageField(upload_to='tfcsImages/')
     reportLink = models.CharField(max_length=500)
