@@ -3,7 +3,8 @@ from django.forms import ModelForm
 
 import portfolio.models
 from .models import BlogsAnswers
-from .models import  tfcs
+from .models import tfcs
+
 
 class BlogForm(ModelForm):
     class Meta:
@@ -31,28 +32,26 @@ class BlogForm(ModelForm):
 class TfcsForm(ModelForm):
     class Meta:
         model = tfcs
-        fields = ['author', 'advisor', 'image',  'year', 'title', 'gitLink', 'reportLink']
+        fields = ['author', 'advisor', 'image', 'year', 'title', 'gitLink', 'reportLink', 'resume']
 
         labels = {
             'title': 'Title',
             'author': 'Author',
             'advisor': 'Advisor',
-            'year': 'Year',
             'image': 'Insert Image',
             'gitLink': 'Git Hub Link',
             'reportLink': 'Report Link',
+            'resume': 'Resume',
 
         }
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
-            'author': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Author'}),
-            'advisor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Advisor'}),
-            'year': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Year'}),
-            'image': forms.ClearableFileInput(attrs={'class': 'form-control', 'placeholder': 'Year'}),
+            'author': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'John Silva'}),
+            'advisor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nuno Mendes'}),
+            'year': forms.TextInput(),
             'gitLink': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Git Hub Link'}),
             'reportLink': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Report Link'}),
-
-
+            'resume': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Resume'}),
 
         }

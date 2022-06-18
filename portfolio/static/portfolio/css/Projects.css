@@ -9,7 +9,7 @@ main {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 32px;
 }
 
 .Projects {
@@ -61,4 +61,122 @@ h1 {
 .Projects > div a:link {
   color: black;
   text-decoration: none;
+}
+
+
+/* Form */
+
+
+.tfcs{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 200px;
+}
+
+.tfcs > div,
+.tfcs:link > div,
+.tfcs:active > div{
+    border: 2px solid black;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    width: 400px;
+    min-height: 400px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 5px 2px 15px black;
+    text-decoration: none;
+    color: black;
+}
+
+.tfcs > div:hover{
+    text-decoration: none;
+    box-shadow: 5px 5px 15px blue;
+
+}
+
+.tfcs a:link,
+.tfcs a:active,
+.tfcs a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.Title{
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.year{
+    bottom: 0;
+}
+
+img{
+    width: 100%;
+}
+
+form textarea{
+    color: red;
+}
+
+
+
+
+
+h2{
+  text-align: center;
+  font-size: 32px;
+}
+
+.form{
+  border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    margin: 30px;
+    padding: 20px 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px  15px black;
+    flex-flow: column;
+    color: black;
+}
+
+.form *{
+    vertical-align: top;
+    color: black;
+}
+
+label:first-child{
+    display: flex;
+    justify-content: center;
+
+}
+
+input{
+    border-radius: 20px;
+    padding: 8px;
+    background-color: ghostwhite;
+}
+
+form textarea{
+    border-radius: 20px;
+    background-color: ghostwhite;
+    color: white;
+   padding: 8px;
+    width: 300px;
+
+}
+
+
+button{
+    border: 2px solid black;
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
 }

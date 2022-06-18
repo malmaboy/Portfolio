@@ -6,7 +6,6 @@ from django.shortcuts import render
 from portfolio import models, forms
 
 
-
 def home_page_view(request):
     data = datetime.datetime.today().year
 
@@ -83,27 +82,20 @@ def project_view(request):
 
     # TFC
 
-    tfcs = models.tfcs.objects.all()
-    form = forms.TfcsForm(request.POST or None)
+    form = forms.TfcsForm(request.POST or None, request.FILES)
     double = False
 
     if form.is_valid():
-        for tfc in models.tfcs.objects.all():
-            if tfc.model.author == form.instance.author:
-                double = True
+        form.save()
 
-            if not double:
-                form.save()
-
-    form = forms.TfcsForm
-
-
+    form = forms.TfcsForm()
+    tfcs = models.tfcs.objects.all()
 
     context = {
         'ano': data,
         'projects': projects,
         'tfcs': tfcs,
-        'form':form,
+        'form': form,
     }
     return render(request, 'portfolio/Projects.html', context)
 
