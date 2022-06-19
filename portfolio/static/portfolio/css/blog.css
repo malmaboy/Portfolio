@@ -1,6 +1,18 @@
+*{
+    color: black;
+}
+
 h2 {
     text-align: center;
     font-size: 30px;
+}
+
+.blogs{
+      display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 200px;
 }
 
 .blog{
@@ -71,8 +83,8 @@ input{
 form textarea{
     border-radius: 20px;
     background-color: ghostwhite;
-    color: white;
-   padding: 8px;
+    color: black;
+    padding: 8px;
     width: 300px;
 
 }

@@ -83,7 +83,6 @@ def project_view(request):
     # TFC
 
     form = forms.TfcsForm(request.POST or None, request.FILES)
-    double = False
 
     if form.is_valid():
         form.save()
@@ -105,15 +104,8 @@ def blog_view(request):
 
     form = forms.BlogForm(request.POST or None)
 
-    duplicade = False
-
     if form.is_valid():
-        for blog in models.BlogsAnswers.objects.all():
-            if blog.description == form.instance.description:
-                duplicade = True
-
-            if not duplicade:
-                form.save()
+        form.save()
 
     form = forms.BlogForm()
 
