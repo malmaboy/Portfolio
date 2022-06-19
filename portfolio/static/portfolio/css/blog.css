@@ -62,12 +62,14 @@ h2 {
     display: flex;
     justify-content: center;
     box-shadow: 5px 5px  15px black;
-    flex-flow: column;
+    bottom: 0;
 }
 
 .form *{
     vertical-align: top;
+
 }
+
 
 label:first-child{
     display: flex;

@@ -22,16 +22,19 @@
 
 
     <div class="blogs">
-           {% for blog in blogs %}
-        <div>
-            <div class="blog">
-            <div><h3>{{ blog.titulo }}</h3></div>
-            <div>{{ blog.firstName }} {{ blog.lastName }}</div>
-            <div class="description">{{ blog.description }}</div>
-            <div>Date: {{ blog.data }}</div>
-        </div>
-    {% endfor %}
+            {% for blog in blogs %}
+                <div>
+                    <div class="blog">
+                        <div><h3>{{ blog.titulo }}</h3></div>
+                        <div>{{ blog.firstName }} {{ blog.lastName }}</div>
+                        <div class="description">{{ blog.description }}</div>
+                        <div>Date: {{ blog.data }}</div>
+                    </div>
+                </div>
+            {% endfor %}
     </div>
+
+
 
 
 
