@@ -29,23 +29,6 @@
 
     <main>
       {% block main %}
-
-      <h3>Introdução</h3>
-      <p>Aplicações web criativas por perfecionistas com deadlines!</p>
-
-      <p>Lista de Topicos:</p>
-
-      <ul>
-        {% for topico in topicos %}
-        <li>{{ topico }}</li>
-        {% endfor %}
-      </ul>
-
-      <p>
-        {% if hora > 12 %} Boa Tarde, {% else %} Bom dia, {% endif %} estamos em
-        {{ local }}, e são {{ hora }} horas.
-      </p>
-
       {% endblock main %}
     </main>
 
@@ -54,7 +37,6 @@
         <a href="https://www.ulusofona.pt/"
           >Universidade Lusófona de Humanidades e Tecnológias, 2021/2022</a
         >
-        <div>Logo</div>
         <div><p>Hugo Carvalho</p></div>
         <div><a href="mailto:hccarvalho.dev@gmail.com">Contact me</a></div>
         <div>{{ ano }}</div>
